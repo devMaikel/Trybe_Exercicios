@@ -139,9 +139,22 @@ document.getElementById('btn-friday').addEventListener('click', function (){
 // Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target .
 
-function zoomIn (element){
-  element.style.fontsize = '150';
-}
+// let arrayDias = document.querySelectorAll('.day');
+
+// for(index in arrayDias){
+//   arrayDias[index].addEventListener('mouseover', zoomIn(arrayDias[index]));
+//   arrayDias[index].addEventListener('mouseout', zoomOut(arrayDias[index]));
+  
+// }
+
+
+// function zoomIn (element){
+  
+// }
+
+// function zoomOut (element){
+
+// }
 
 
 
@@ -151,8 +164,14 @@ function zoomIn (element){
 // Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
+function addTask (task){
+  let newElement = document.createElement('span');
+  newElement.innerText = task;
 
+  document.querySelector('.my-tasks').appendChild(newElement);
+}
 
+addTask('Estudar!');
 
 
 
@@ -165,7 +184,15 @@ function zoomIn (element){
 // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 
+function addLeg (cor){
+  let newLeg = document.createElement('div');
+  newLeg.style.backgroundColor = cor;
+  newLeg.classList.add('task');
 
+  document.querySelector('.my-tasks').appendChild(newLeg);
+}
+
+addLeg('red');
 
 
 

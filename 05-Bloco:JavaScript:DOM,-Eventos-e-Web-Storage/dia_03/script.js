@@ -124,7 +124,7 @@ document.getElementById('btn-friday').addEventListener('click', function (){
   let sextas = document.querySelectorAll('.friday');
 
   for(index in sextas){
-    if(sextas[index].style.backgroundColor != 'rgb(100, 15, 100)'){
+    if(sextas[index].style.backgroundColor == 'rgb(238, 238, 238)'){
     sextas[index].style.backgroundColor = 'rgb(100, 15, 100)'
     }else{
       sextas[index].style.backgroundColor = 'rgb(238, 238, 238)'
@@ -201,7 +201,15 @@ addLeg('red');
 // Implemente uma função que adiciona um evento que, ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected , ela estará selecionada.
 // Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task , ou seja, esta tarefa está deixando de ser uma tarefa selecionada.
 
+let tasksVar = document.querySelectorAll('.task');
 
+for(index in tasksVar) {
+  tasksVar[index].addEventListener('click', selectTask(tasksVar[index]));
+}
+
+function selectTask(taskin) {
+  console.log(taskin);
+}
 
 
 

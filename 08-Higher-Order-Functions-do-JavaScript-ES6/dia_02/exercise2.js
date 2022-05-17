@@ -63,6 +63,6 @@ const books = [
 
 // Adicione o código do exercício aqui:
 
-const verify = (p) => Object.values(p).every((year) => year >= 100);
+const verify = (p) => (p).every((year) => year.author.birthYear >= 1900);
 
 console.log(verify(books));

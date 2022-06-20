@@ -1,0 +1,9 @@
+* {
+  padding: 10px;  
+}
+
+.pokeDiv {
+  border: solid 1px black;
+  width: 300px;
+  text-align: center;
+}
